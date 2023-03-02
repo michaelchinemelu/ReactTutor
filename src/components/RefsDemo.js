@@ -13,8 +13,11 @@ class RefsDemo extends Component{
     }
     
     componentDidMount(){
-        this.inputRef.current.focus()
-        console.log(this.inputRef)
+        // this.inputRef.current.focus()
+        // console.log(this.inputRef)
+        if(this.cbRef){
+            this.cbRef.focus()
+        }
     }
     clickHandler(){
         alert(`${this.inputRef.current.value} You are Welcome` )
@@ -25,7 +28,8 @@ class RefsDemo extends Component{
                 <h2>
                     Michael thanks you are here!
                     <p><input type='text' ref={this.inputRef}></input> 
-                    <input type='text' ref={this.inputRef}></input></p>
+                    {/* Refs cannot be attatched to a functional component */}
+                    <input type='text' ref={this.setCbRef}></input></p>
                     <button type="submit" onClick={this.clickHandler.bind(this)}>Click</button>
                 </h2>
             </div>

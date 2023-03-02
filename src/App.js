@@ -1,5 +1,6 @@
 import React, {PureComponent, useState} from 'react'
 import './App.css';
+import FocusInputRef from './components/FocusInputRef';
 // import Welcome from './components/Welcome'
 // import Count from './components/Count';
 // import Message from './components/Message';
@@ -12,9 +13,11 @@ import './App.css';
 // import ArrayListFunc from './components/ArrayList';
 // import Form from './components/Form';
 import FragmentDemo from './components/FragmentDemo';
+import FrParentInput from './components/FrParentInput';
 import ParentComp from './components/ParentComp';
+import Hero from './Hero';
+import PortalDemo from './PortalDemo';
 // import LifeCycleA from './components/LifeCycleA';
-import RefsDemo from './components/RefsDemo';
 function App() {
   return (
     <div className="App">
@@ -32,7 +35,13 @@ function App() {
   {/* <LifeCycleA /> */}
   {/* <FragmentDemo />
   <ParentComp /> */}
-  <RefsDemo />
+  {/* <RefsDemo /> */}
+  {/* <FocusInputRef /> */}
+  {/* <FrParentInput />
+  <PortalDemo /> */}
+  <Hero  name="Batman" />
+  <Hero name="Superman" />
+  <Hero name="tinubu" />
     </div>
   );
 }
